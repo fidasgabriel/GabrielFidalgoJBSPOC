@@ -5,6 +5,6 @@ RUN mvn clean package -DskipTests
 
 # Package stage
 FROM openjdk:17-jdk-slim
-COPY --from=build /target/TestingApi-0.0.1-SNAPSHOT.jar TestingApi.jar
+COPY --from=build /target/JBS-POC-0.0.1-SNAPSHOT.jar JBS-POC.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","TestingApi.jar"]
+ENTRYPOINT ["java","-jar","JBS-POC.jar"]
