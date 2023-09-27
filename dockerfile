@@ -7,7 +7,7 @@ RUN mvn clean package -DskipTests
 # Package stage
 FROM openjdk:17-jdk-slim    
 
-COPY --from=build /target/JBS-0.1-SNAPSHOT.jar JBS.jar
+COPY --from=build /target/JBS-0.0.1-SNAPSHOT.jar JBS.jar
 
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","JBS.jar"]
